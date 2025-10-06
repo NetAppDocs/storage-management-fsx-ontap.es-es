@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use/task-remove-filesystem.html 
 keywords: amazon fsx for netapp ontap, fsx for ontap, fsx, remove fsx for ontap file system, remove file system, file system, disassociate file system, bluexp, NetApp Console 
-summary: Eliminar un sistema de archivos FSx para ONTAP de un proyecto en la consola de NetApp . 
+summary: Eliminar un sistema de archivos FSx para ONTAP de un proyecto en la NetApp Console. 
 ---
 = Eliminar un sistema de archivos FSx para ONTAP de un proyecto
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: Eliminar un sistema de archivos FSx para ONTAP de un proyecto en la con
 
 
 [role="lead"]
-Eliminar un sistema de archivos FSx para ONTAP de un proyecto en la consola de NetApp .  Esta operación disocia el sistema de archivos de un proyecto para que pueda asociarlo con otro proyecto dentro de la misma cuenta.
+Eliminar un sistema de archivos FSx para ONTAP de un proyecto en la NetApp Console.  Esta operación disocia el sistema de archivos de un proyecto para que pueda asociarlo con otro proyecto dentro de la misma cuenta.
 
 .Acerca de esta tarea
-Al eliminar un sistema de archivos FSx para ONTAP de un proyecto, lo elimina de la consola de NetApp .  No elimina el sistema de archivos FSx para ONTAP .  Más tarde, puede redescubrir el sistema de archivos FSx para ONTAP en el mismo proyecto o en uno diferente desde la misma cuenta.
+Al eliminar un sistema de archivos FSx para ONTAP de un proyecto, lo elimina de la NetApp Console.  No elimina el sistema de archivos FSx para ONTAP .  Más tarde, puede redescubrir el sistema de archivos FSx para ONTAP en el mismo proyecto o en uno diferente desde la misma cuenta.
 
 .Pasos
-. Desde el menú de la consola de NetApp , seleccione *Almacenamiento* y luego *Administración*.
+. Desde el menú de la NetApp Console , seleccione *Almacenamiento* y luego *Administración*.
 . Seleccione el sistema de archivos que desea eliminar.
 . Seleccione *Ingresar al sistema*.
 . Desde FSx para ONTAP en Almacenamiento, seleccione el menú de tres puntos y luego seleccione *Eliminar del proyecto*.

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: use/task-manage-fsx-systems.html 
 keywords: amazon fsx for netapp ontap, fsx, manage fsx for ontap system, delete fsx for ontap system, remove fsx for ontap system, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity, replication, classification, sync, backup, recovery, bluexp, NetApp Console 
-summary: Después de crear o descubrir un sistema FSx para ONTAP en la consola de NetApp , puede administrar el sistema de archivos y usar los servicios de datos de NetApp que brindan capacidades como respaldo y recuperación. 
+summary: Después de crear o descubrir un sistema FSx para ONTAP en la NetApp Console, puede administrar el sistema de archivos y usar los servicios de datos de NetApp que brindan capacidades como respaldo y recuperación. 
 ---
-= Administrar un sistema de archivos FSx para ONTAP en la consola de NetApp
+= Administrar un sistema de archivos FSx para ONTAP en la NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: Después de crear o descubrir un sistema FSx para ONTAP en la consola d
 
 
 [role="lead"]
-Después de crear o descubrir un sistema FSx para ONTAP en la consola de NetApp , puede administrar el sistema de archivos creando volúmenes, administrando máquinas virtuales de almacenamiento, protegiendo datos y administrando el sistema de archivos.  La consola también le permite utilizar servicios de datos que brindan capacidades como copia de seguridad y recuperación, clasificación de datos, sincronización de datos y más.
+Después de crear o descubrir un sistema FSx para ONTAP en la NetApp Console, puede administrar el sistema de archivos creando volúmenes, administrando máquinas virtuales de almacenamiento, protegiendo datos y administrando el sistema de archivos.  La consola también le permite utilizar servicios de datos que brindan capacidades como copia de seguridad y recuperación, clasificación de datos, sincronización de datos y más.
 
 
 
 == Administrar un sistema de archivos mediante cargas de trabajo de NetApp
 
-Cuando abre un sistema FSx para ONTAP desde la página Sistemas de consola de NetApp , se lo dirige a Cargas de trabajo de NetApp .  Workloads es un servicio de automatización y optimización inteligente que utiliza las mejores prácticas de la industria para diseñar, configurar y operar cargas de trabajo clave mediante Amazon FSx for NetApp ONTAP.
+Cuando abre un sistema FSx para ONTAP desde la página Sistemas de NetApp Console , se lo dirige a Cargas de trabajo de NetApp .  Workloads es un servicio de automatización y optimización inteligente que utiliza las mejores prácticas de la industria para diseñar, configurar y operar cargas de trabajo clave mediante Amazon FSx for NetApp ONTAP.
 
 https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Aprenda a administrar un sistema de archivos mediante NetApp Workloads"^]
 
@@ -66,7 +66,7 @@ link:https://docs.netapp.com/us-en/data-services-copy-sync/task-quick-start.html
 
 NetApp Data Classification le permite escanear y clasificar datos en toda la multicloud híbrida de su organización.
 
-link:https://docs.netapp.com/us-en/data-services-data-classification/index.html["Comience a utilizar la clasificación de datos de NetApp"^]
+link:https://docs.netapp.com/us-en/data-services-data-classification/index.html["Comience a utilizar la NetApp Data Classification"^]
 
 
 
@@ -76,7 +76,7 @@ Replicar datos para respaldar la copia de seguridad y la recuperación ante desa
 
 link:https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["Comience a utilizar NetApp Replication"^]
 
-La replicación de datos entre dos sistemas de archivos FSx para ONTAP es posible desde la página de Sistemas de consola de NetApp .
+La replicación de datos entre dos sistemas de archivos FSx para ONTAP es posible desde la página de Sistemas de NetApp Console .
 
 .Antes de empezar
 Tenga en cuenta lo siguiente antes de comenzar.
@@ -86,14 +86,14 @@ Tenga en cuenta lo siguiente antes de comenzar.
 
 
 .Pasos
-. Desde la página Sistemas de consola de NetApp , arrastre el sistema de archivos FSx para ONTAP de origen sobre el sistema de archivos FSx para ONTAP de destino y seleccione *Replicación*.
+. Desde la página Sistemas de NetApp Console , arrastre el sistema de archivos FSx para ONTAP de origen sobre el sistema de archivos FSx para ONTAP de destino y seleccione *Replicación*.
 . En la página Crear replicación, seleccione los volúmenes de origen que desea replicar y luego haga clic en *Siguiente*.
 . En Objetivo de replicación, proporcione lo siguiente:
 +
 .. *Nombre del objetivo*: El nombre del objetivo se seleccionó previamente durante la operación de arrastrar y soltar en el lienzo.
 .. *Nombre de la máquina virtual de almacenamiento*: seleccione la máquina virtual de almacenamiento en el menú desplegable.  La máquina virtual de almacenamiento que seleccione es el destino de todos los volúmenes seleccionados en esta relación de replicación.
 .. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy` .  Puede utilizar el nombre de volumen generado automáticamente o ingresar otro nombre de volumen.
-.. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación. Dependiendo del caso de uso seleccionado, Workload Factory completa el formulario con valores recomendados de acuerdo con las mejores prácticas. Puede aceptar los valores recomendados o realizar cambios a medida que completa el formulario.
+.. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación.  Dependiendo del caso de uso seleccionado, Workload Factory completa el formulario con valores recomendados de acuerdo con las mejores prácticas.  Puede aceptar los valores recomendados o realizar cambios a medida que completa el formulario.
 +
 *** Migración: transfiere sus datos al sistema de archivos FSx de destino para ONTAP
 *** Recuperación ante desastres en caliente: garantiza una alta disponibilidad y una rápida recuperación ante desastres para cargas de trabajo críticas
@@ -119,10 +119,10 @@ Para todos los casos de uso, si habilita las instantáneas para la retención a 
 
 .. *Política de niveles*: seleccione la política de niveles para los datos almacenados en el volumen de destino.  La política de niveles tiene como valor predeterminado la política de niveles recomendada para el caso de uso que seleccionó.
 +
-_Equilibrado (automático)_ es la política de niveles predeterminada al crear un volumen mediante la consola de Workload Factory. Para obtener más información sobre las políticas de niveles de volumen, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento de volumen"^] en la documentación de AWS FSx para NetApp ONTAP . Tenga en cuenta que Workload Factory utiliza nombres basados ​​en casos de uso en la consola de Workload Factory para las políticas de niveles e incluye los nombres de políticas de niveles de FSx para ONTAP entre paréntesis.
+_Equilibrado (automático)_ es la política de niveles predeterminada al crear un volumen mediante la consola de Workload Factory.  Para obtener más información sobre las políticas de niveles de volumen, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento de volumen"^] en la documentación de AWS FSx para NetApp ONTAP .  Tenga en cuenta que Workload Factory utiliza nombres basados ​​en casos de uso en la consola de Workload Factory para las políticas de niveles e incluye los nombres de políticas de niveles de FSx para ONTAP entre paréntesis.
 
 +
-Si seleccionó el caso de uso de migración, Workload Factory selecciona automáticamente copiar la política de niveles del volumen de origen al volumen de destino. Puede anular la selección para copiar la política de niveles y seleccionar una política de niveles que se aplique al volumen seleccionado para la replicación.
+Si seleccionó el caso de uso de migración, Workload Factory selecciona automáticamente copiar la política de niveles del volumen de origen al volumen de destino.  Puede anular la selección para copiar la política de niveles y seleccionar una política de niveles que se aplique al volumen seleccionado para la replicación.
 
 .. *Tasa máxima de transferencia*: seleccione *Limitado* e ingrese el límite máximo de transferencia en MB/s.  Alternativamente, seleccione *Ilimitado*.
 +

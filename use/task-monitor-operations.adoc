@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: use/task-monitor-operations.html 
 keywords: monitor jobs, track jobs, monitor, track, NetApp Console, bluexp 
-summary: Realice un seguimiento de las operaciones de FSx para ONTAP y monitoree el progreso de la operación con Tracker en la consola de NetApp . 
+summary: Realice un seguimiento de las operaciones de FSx para ONTAP y monitoree el progreso de la operación con Tracker en la NetApp Console. 
 ---
-= Supervise las operaciones de FSx para ONTAP con Tracker en la consola de NetApp
+= Supervise las operaciones de FSx para ONTAP con Tracker en la NetApp Console
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Supervise y realice un seguimiento de la ejecución de las operaciones de FSx para ONTAP y supervise el progreso del trabajo con Tracker en la consola de NetApp .
+Supervise y realice un seguimiento de la ejecución de las operaciones de FSx para ONTAP y supervise el progreso del trabajo con Tracker en la NetApp Console.
 
 .Acerca de esta tarea
 NetApp Console proporciona Tracker, una función de monitoreo de trabajos, para que pueda monitorear y seguir el progreso y el estado de las credenciales, FSx for ONTAP y operaciones de vínculo, revisar detalles de tareas y subtareas de operación y diagnosticar problemas o fallas.
@@ -37,10 +37,10 @@ Retención de eventos:: Los eventos se conservan en la interfaz de usuario duran
 
 == Seguimiento y monitoreo de operaciones
 
-Realice un seguimiento y monitoree las operaciones en la consola de NetApp con Tracker.
+Realice un seguimiento y monitoree las operaciones en la NetApp Console con Tracker.
 
 .Pasos
-. Desde el menú de la consola de NetApp , seleccione *Cargas de trabajo* y luego *Administración*.
+. Desde el menú de la NetApp Console , seleccione *Cargas de trabajo* y luego *Administración*.
 . Desde el menú Administración, seleccione *Rastreador*.
 . En Tracker, vea las tareas o use los filtros o la búsqueda para limitar los resultados.  También puede descargar un informe de todas las operaciones seleccionando *Exportar CSV*.
 

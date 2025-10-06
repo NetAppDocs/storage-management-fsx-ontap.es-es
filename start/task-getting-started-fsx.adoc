@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: start/task-getting-started-fsx.html 
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, vpc, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, netapp console, get started, permissions, policy, iam policy, policies, attach, iam user, access key, secret key, keys, sign up, cloud manager, create, bluexp 
-summary: Comience a utilizar Amazon FSx for NetApp ONTAP en la consola de NetApp agregando credenciales, creando un agente o enlace de consola y creando o descubriendo un sistema de archivos. 
+summary: Comience a utilizar Amazon FSx for NetApp ONTAP en la NetApp Console agregando credenciales, creando un agente o enlace de consola y creando o descubriendo un sistema de archivos. 
 ---
 = Inicio rápido de Amazon FSx for NetApp ONTAP
 :hardbreaks:
@@ -14,15 +14,15 @@ summary: Comience a utilizar Amazon FSx for NetApp ONTAP en la consola de NetApp
 
 
 [role="lead"]
-Comience a utilizar Amazon FSx for NetApp ONTAP en la consola de NetApp agregando credenciales, creando un agente o enlace de consola y creando o descubriendo un sistema de archivos.
+Comience a utilizar Amazon FSx for NetApp ONTAP en la NetApp Console agregando credenciales, creando un agente o enlace de consola y creando o descubriendo un sistema de archivos.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] link:../requirements/task-setting-up-permissions-fsx.html["Agregar credenciales y permisos"]
 [role="quick-margin-para"]
-Es necesario agregar credenciales de AWS para proporcionar a la consola de NetApp los permisos necesarios para crear y administrar FSx para sistemas de archivos ONTAP .  Puede elegir entre permisos de _sólo lectura_ y de _lectura/escritura_.
+Es necesario agregar credenciales de AWS para proporcionar a la NetApp Console los permisos necesarios para crear y administrar FSx para sistemas de archivos ONTAP .  Puede elegir entre permisos de _sólo lectura_ y de _lectura/escritura_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Opcional: Crear un agente de consola o un enlace
 [role="quick-margin-para"]
-Para realizar algunas tareas de administración desde la consola de NetApp , necesita un agente de consola o un enlace de cargas de trabajo de NetApp .  Un _agente de consola_ es una máquina virtual que se implementa en su VPC para administrar sus sistemas de archivos FSx para ONTAP .  Un _link_ aprovecha AWS Lambda para crear una relación de confianza y conectividad con sus sistemas de archivos FSx para ONTAP .
+Para realizar algunas tareas de administración desde la NetApp Console, necesita un agente de consola o un vínculo de cargas de trabajo de NetApp .  Un _agente de consola_ es una máquina virtual que se implementa en su VPC para administrar sus sistemas de archivos FSx para ONTAP .  Un _link_ aprovecha AWS Lambda para crear una relación de confianza y conectividad con sus sistemas de archivos FSx para ONTAP .
 
 [role="quick-margin-list"]
 * link:../start/concept-fsx-aws.html#console-agents-and-links-unlock-all-fsx-for-ontap-features["Descubra cuándo se requiere un agente o enlace de consola para la administración de FSx para ONTAP"]
@@ -33,4 +33,4 @@ Para realizar algunas tareas de administración desde la consola de NetApp , nec
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] link:../use/task-create-fsx-system.html["Crear o descubrir un sistema FSx para ONTAP"]
 [role="quick-margin-para"]
-Cree su sistema de archivos FSx para ONTAP directamente desde la consola de NetApp o descubra un sistema de archivos que ya haya creado en su entorno de AWS.
+Cree su sistema de archivos FSx para ONTAP directamente desde la NetApp Console o descubra un sistema de archivos que ya haya creado en su entorno de AWS.
