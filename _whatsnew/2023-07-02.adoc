@@ -1,0 +1,15 @@
+= Agregar una máquina virtual de almacenamiento
+:allow-uri-read: 
+
+
+
+
+=== Agregar una máquina virtual de almacenamiento
+
+Ahora puede agregar una máquina virtual de almacenamiento al sistema de archivos Amazon FSx for NetApp ONTAP usando BlueXP.
+
+
+
+=== La pestaña **Mis oportunidades** ahora es **Mi patrimonio**
+
+La pestaña **Mis oportunidades** ahora es **Mi patrimonio**.  La documentación se actualiza para reflejar el nuevo nombre.

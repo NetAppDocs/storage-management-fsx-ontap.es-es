@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: start/concept-fsx-aws.html 
+keywords: Amazon FSx for NetApp ONTAP, volumes, aws, access key, secret key, cloud manager, NetApp Console, bluexp 
+summary: Amazon FSx for NetApp ONTAP es un servicio totalmente administrado que permite a los clientes lanzar y ejecutar sistemas de archivos impulsados ​​por el sistema operativo de almacenamiento ONTAP de NetApp. 
+---
+= Obtenga más información sobre Amazon FSx for NetApp ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSx for NetApp ONTAP"^]es un servicio completamente administrado que permite a los clientes iniciar y ejecutar sistemas de archivos impulsados ​​por el sistema operativo de almacenamiento NetApp ONTAP .  FSx para ONTAP ofrece las mismas características, rendimiento y capacidades administrativas que los clientes de NetApp usan en las instalaciones, con la simplicidad, agilidad, seguridad y escalabilidad de un servicio nativo de AWS.
+
+
+
+== Consola de NetApp
+
+Se puede acceder a la administración de Amazon FSx for NetApp ONTAP a través de la consola de NetApp .
+
+La consola de NetApp proporciona una gestión centralizada de los servicios de datos y almacenamiento de NetApp en entornos locales y en la nube a nivel empresarial. La consola es necesaria para acceder y utilizar los servicios de datos de NetApp . Como interfaz de administración, le permite administrar muchos recursos de almacenamiento desde una sola interfaz. Los administradores de la consola pueden controlar el acceso al almacenamiento y los servicios para todos los sistemas dentro de la empresa.
+
+No necesita una licencia o suscripción para comenzar a usar NetApp Console y solo incurre en cargos cuando necesita implementar agentes de Console en su nube para garantizar la conectividad con sus sistemas de almacenamiento o servicios de datos de NetApp . Sin embargo, algunos servicios de datos de NetApp accesibles desde la consola requieren licencia o suscripción.
+
+Obtenga más información sobre el https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["Consola de NetApp"] .
+
+
+
+== Uso de FSx para ONTAP desde la consola de NetApp
+
+Desde la página de sistemas de la consola de NetApp , puede crear y descubrir sistemas FSx para ONTAP y usar System Manager y otros servicios de NetApp .  Si desea administrar sistemas FSx para ONTAP y cargas de trabajo que se ejecutan en Amazon FSx for NetApp ONTAP, utilice https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Fábrica de cargas de trabajo de NetApp"^] .
+
+link:../use/task-creating-fsx-working-environment.html["Aprenda a crear y descubrir sistemas FSx para ONTAP desde la consola de NetApp"^] .
+
+
+
+== Funciones
+
+* No es necesario configurar ni administrar dispositivos de almacenamiento, software o copias de seguridad.
+* Compatibilidad con CIFS, iSCSI, NFSv3, NFSv4.x, https://docs.netapp.com/us-en/ontap/s3-config/ontap-version-support-s3-concept.html["S3"^] , y protocolos SMB v2.0 - v3.1.1.
+* Capacidad de almacenamiento de datos de bajo costo y prácticamente ilimitada utilizando el nivel de almacenamiento de acceso poco frecuente (IA) disponible.
+* Certificado para ejecutarse en aplicaciones sensibles a la latencia, incluido Oracle RAC.
+* Posibilidad de elegir entre precios combinados y de pago por uso.
+
+
+
+
+== Funciones adicionales en la consola de NetApp
+
+* FSx para ONTAP es compatible cuando se utiliza la consola de NetApp en modo _estándar_, que aprovecha la capa SaaS de la consola de NetApp para proporcionar una funcionalidad completa.  El modo _Restringido_ y el modo _privado_ no son compatibles.
+
+
+Consulte link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Modos de implementación de la consola de NetApp"^] Para más información.
+
+* Usandolink:https://docs.netapp.com/us-en/console-family/["Consola de NetApp"^] y un agente de consola en AWS, puede crear y administrar volúmenes, replicar datos e integrar FSx para ONTAP con servicios de nube de NetApp , como NetApp Data Classification y NetApp Copy and Sync.
+* Al utilizar tecnología impulsada por inteligencia artificial (IA), NetApp Data Classification puede ayudarlo a comprender el contexto de los datos e identificar datos confidenciales que residen en sus cuentas de FSx para ONTAP . https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Más información"^] .
+* Con NetApp Copy and Sync, puede automatizar la migración de datos a cualquier destino en la nube o en las instalaciones. https://docs.netapp.com/us-en/data-services-copy-sync/concept-cloud-sync.html["Más información"^]
+
+
+
+
+== Los agentes y enlaces de la consola desbloquean todas las funciones de FSx para ONTAP
+
+Los agentes y enlaces de la consola permiten la conectividad y las relaciones de confianza entre la consola de NetApp y Amazon FSx for NetApp ONTAP .  Un agente de consola es un software de NetApp que se ejecuta en su nube o red local, y un vínculo utiliza AWS Lambda para ejecutar el código de NetApp .  No necesita un agente o enlace de consola para comenzar a usar la consola o crear sistemas FSx para ONTAP , pero sí necesita usar un agente o enlace de consola para aprovechar al máximo las funciones de FSx para ONTAP .
+
+Necesita un agente o enlace de consola para utilizar las siguientes funciones:
+
+* Estado bien diseñado de FSx para configuraciones del sistema de archivos ONTAP para mantenimiento proactivo, confiabilidad y optimización de costo-rendimiento
+* Protección autónoma contra ransomware de NetApp (ARP/IA)
+* Observabilidad de capacidad holística mejorada en FSx para sistemas de archivos ONTAP
+* Replicación, administración y monitoreo de datos de máquinas virtuales de volumen y almacenamiento
+* Acciones SMB/CIFS y política de exportación de NFS y gestión del suministro
+* Administración de volúmenes iSCSI en un sistema de archivos FSx para ONTAP
+* Creación y gestión de políticas de instantáneas para SLA de protección personalizados
+* Mejoras en la gestión de inodos para la gestión automática de la capacidad
+* Crecimiento automático de volumen para escalamiento elástico
+* Creación y gestión de clones para la clonación de datos instantánea e in situ
+* Visualización de métricas adicionales directamente desde ONTAP , como la versión de ONTAP
+
+
+Obtenga más información sobre los agentes y enlaces de la consola y cuándo debería usarlos:
+
+* https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Obtenga más información sobre los agentes de consola"^] .
+* https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Obtenga más información sobre los enlaces"^] .
+
+
+
+
+== Costo
+
+Su cuenta de FSx para ONTAP la mantiene AWS y no NetApp. Referirse a https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Guía de introducción a Amazon FSx for NetApp ONTAP"^] .
+
+Existe un costo adicional asociado con el uso del agente o enlace de la consola en AWS y los servicios de datos opcionales como NetApp Data Classification y NetApp Copy and Sync.
+
+
+
+== Regiones compatibles
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Ver regiones de Amazon compatibles."^]
+
+
+
+== Obtener ayuda
+
+Amazon FSx for NetApp ONTAP es una solución propia de AWS.  Si tiene preguntas o problemas de soporte técnico asociados con su sistema de archivos FSx for ONTAP , infraestructura o cualquier solución que utilice este servicio, utilice el Centro de soporte en su Consola de administración de AWS para abrir un caso de soporte con AWS.  Seleccione el servicio "FSx for ONTAP" y la categoría adecuada.  Proporcione la información restante necesaria para crear su caso de soporte de AWS.
+
+Para problemas de soporte técnico y general específicos de la consola de NetApp o de las soluciones y servicios de almacenamiento de NetApp , puede abrir un ticket de soporte de NetApp usando su número de serie de nivel de organización de NetApp .  Necesitaráslink:https://docs.netapp.com/us-en/console-fsx-ontap/support/task-support-registration.html["Registre su organización NetApp"^] para activar el soporte.

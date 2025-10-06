@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: use/task-monitor-operations.html 
+keywords: monitor jobs, track jobs, monitor, track, NetApp Console, bluexp 
+summary: Realice un seguimiento de las operaciones de FSx para ONTAP y monitoree el progreso de la operación con Tracker en la consola de NetApp . 
+---
+= Supervise las operaciones de FSx para ONTAP con Tracker en la consola de NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Supervise y realice un seguimiento de la ejecución de las operaciones de FSx para ONTAP y supervise el progreso del trabajo con Tracker en la consola de NetApp .
+
+.Acerca de esta tarea
+NetApp Console proporciona Tracker, una función de monitoreo de trabajos, para que pueda monitorear y seguir el progreso y el estado de las credenciales, FSx for ONTAP y operaciones de vínculo, revisar detalles de tareas y subtareas de operación y diagnosticar problemas o fallas.
+
+Hay varias acciones disponibles en Tracker.  Puede filtrar trabajos por período de tiempo (últimas 24 horas, 7 días, 14 días o 30 días), carga de trabajo, estado y usuario; buscar trabajos usando la función de búsqueda; y descargar la tabla de trabajos como un archivo CSV.  Puedes actualizar el Tracker en cualquier momento.  Además, puede volver a intentar rápidamente una operación fallida o editar los parámetros de una operación fallida e intentar la operación nuevamente.
+
+Tracker admite dos niveles de monitorización dependiendo de la operación.  Cada tarea, como la implementación del sistema de archivos, muestra la descripción de la tarea, el estado, la hora de inicio, la duración de la tarea, el usuario, la región, el recurso proxy, el ID de la tarea y todas las subtareas relacionadas.  Puede ver las respuestas de la API para comprender qué sucedió durante la operación.
+
+Niveles de tareas de seguimiento con ejemplos::
++
+--
+* Nivel 1 (tarea principal): realiza un seguimiento de la implementación del sistema de archivos.
+* Nivel 2 (subtarea): realiza un seguimiento de las subtareas relacionadas con la implementación del sistema de archivos.
+
+
+--
+Estado de la operación:: El estado de la operación en Tracker es el siguiente: _en progreso_, _éxito_ y _fallido_.
+Frecuencia de operación:: La frecuencia de operación se basa en el tipo de tarea y el cronograma.
+Retención de eventos:: Los eventos se conservan en la interfaz de usuario durante 30 días.
+
+
+
+
+== Seguimiento y monitoreo de operaciones
+
+Realice un seguimiento y monitoree las operaciones en la consola de NetApp con Tracker.
+
+.Pasos
+. Desde el menú de la consola de NetApp , seleccione *Cargas de trabajo* y luego *Administración*.
+. Desde el menú Administración, seleccione *Rastreador*.
+. En Tracker, vea las tareas o use los filtros o la búsqueda para limitar los resultados.  También puede descargar un informe de todas las operaciones seleccionando *Exportar CSV*.
+
+
+
+
+== Ver solicitud de API
+
+Ver la solicitud de API en Codebox para una tarea en Tracker.
+
+.Pasos
+. En Tracker, seleccione una tarea.
+. Seleccione el menú de tres puntos y luego seleccione *Ver solicitud de API*.
+
+
+
+
+== Reintentar una operación fallida
+
+Reintentar una operación fallida en Tracker.  Al volver a intentar la operación fallida se inicia una nueva tarea que puedes supervisar en Tracker.
+
+También puede copiar el mensaje de error de una operación fallida.
+
+
+NOTE: Puede volver a intentar la operación fallida solo una vez.
+
+.Pasos
+. En Tracker, seleccione una operación fallida.
+. Seleccione el menú de tres puntos y luego seleccione *Reintentar*.
+
+
+.Resultado
+La operación se reinicia y aparece como una nueva tarea en Tracker.
+
+
+
+== Editar y volver a intentar una operación fallida
+
+Edite los parámetros de la operación fallida y vuelva a intentar la operación fuera de Tracker.
+
+.Pasos
+. En Tracker, seleccione una operación fallida.
+. Seleccione el menú de tres puntos y luego seleccione *Editar y reintentar*.
++
+Se le redirige a la página de operación, por ejemplo, creación de volumen, donde puede editar los parámetros y volver a intentar la operación.
+
+
+
+.Resultado
+Se reinicia la operación.  Vaya a Rastreador para ver el estado de la operación.
