@@ -14,7 +14,7 @@ Tracker ahora proporciona respuestas de API para que puedas ver la salida de la 
 
 Ahora tiene la opción de usar secretos de AWS Secrets Manager para autenticar enlaces, de modo que no tenga que usar credenciales almacenadas en BlueXP Workloads.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conéctese a un sistema de archivos FSx para ONTAP con un enlace Lambda"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conéctese a un sistema de archivos FSx para ONTAP con un enlace Lambda"^]
 
 
 
@@ -22,8 +22,8 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conécte
 
 BlueXP Workloads proporciona un panel donde puede revisar el estado bien diseñado de las configuraciones de su sistema de archivos.  Puede aprovechar este análisis para implementar las mejores prácticas para sus sistemas de archivos FSx para ONTAP .  El análisis de la configuración del sistema de archivos incluye las siguientes configuraciones: umbral de capacidad SSD, instantáneas locales programadas, FSx programado para copias de seguridad de ONTAP , niveles de datos y replicación de datos remota.
 
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["Obtenga más información sobre el análisis bien diseñado para configuraciones del sistema de archivos"]
-* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["Implemente las mejores prácticas para sus sistemas de archivos"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["Obtenga más información sobre el análisis bien diseñado para configuraciones del sistema de archivos"^]
+* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["Implemente las mejores prácticas para sus sistemas de archivos"^]
 
 
 

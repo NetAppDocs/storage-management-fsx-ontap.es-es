@@ -8,4 +8,4 @@
 
 La replicación de datos ahora está disponible entre dos sistemas de archivos FSx para ONTAP desde el lienzo en la consola BlueXP .
 
-link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#replicate-data["Replicar datos"]
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html#replicate-data["Replicar datos"]
