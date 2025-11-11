@@ -18,6 +18,18 @@ Descubra las novedades de FSx para ONTAP.
 
 
 
+== 11 de noviembre de 2025
+
+
+
+=== Compatibilidad con la replicación entre sistemas ONTAP locales y sistemas de archivos FSx para ONTAP
+
+La replicación de datos está disponible entre un sistema ONTAP local y un sistema de archivos FSx para ONTAP desde FSx para ONTAP dentro de la NetApp Console.
+
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html#replicate-data["Replicar datos"]
+
+
+
 == 6 de octubre de 2025
 
 

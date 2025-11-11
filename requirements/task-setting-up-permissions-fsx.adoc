@@ -14,7 +14,7 @@ summary: Para crear o administrar un entorno de trabajo FSx para ONTAP , debe ag
 
 
 [role="lead"]
-Para crear o administrar un entorno de trabajo FSx para ONTAP , debe agregar credenciales de AWS en la NetApp Console proporcionando el ARN de una función de IAM que otorga los permisos necesarios para crear un sistema FSx para ONTAP desde la NetApp Console.
+Para crear o administrar un sistema de archivos FSx para ONTAP , debe agregar las credenciales de AWS en la NetApp Console proporcionando el ARN de un rol de IAM que otorgue los permisos necesarios para crear un sistema FSx para ONTAP desde la NetApp Console.
 
 
 
@@ -30,7 +30,7 @@ La interfaz de Workload Factory proporciona a FSx para usuarios de ONTAP opcione
 
 == Acerca de esta tarea
 
-Al agregar nuevas credenciales para FSx para ONTAP desde Storage en Workload Factory, deberá decidir en qué nivel de permisos, o _modo operativo_, desea operar. Para descubrir e implementar recursos de AWS como los sistemas de archivos FSx para ONTAP , necesitará permisos de _solo lectura_ o de _lectura/escritura_.  FSx para ONTAP funcionará en modo _básico_ a menos que seleccione el modo _solo lectura_ o el modo _lectura/escritura_.  _Solo lectura_ son lo mismo que los permisos de visualización.  _Lectura/Escritura_ son lo mismo que permisos de operación. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Obtenga más información sobre los modos operativos"] .
+Al agregar nuevas credenciales para FSx para ONTAP desde Almacenamiento en Workload Factory, deberá decidir qué políticas de permisos desea otorgar.  Para descubrir recursos de AWS como FSx para sistemas de archivos ONTAP , necesitará permisos de _visualización, planificación y análisis_.  Para implementar FSx para sistemas de archivos ONTAP , necesitará permisos de _creación y eliminación de sistemas de archivos_.  Puedes realizar operaciones básicas en FSx para ONTAP sin permisos. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Obtén más información sobre los permisos."].
 
 Las credenciales de AWS nuevas y existentes se pueden ver desde el menú Administración en la página *Credenciales*.
 
@@ -81,100 +81,9 @@ En esta sección, elegirá la capacidad de almacenamiento que se administrará c
 +
 Puede agregar capacidades adicionales más adelante, así que simplemente seleccione las cargas de trabajo que actualmente desea implementar y administrar.
 
-. Para aquellas capacidades de carga de trabajo que ofrecen una selección de niveles de permiso (solo lectura o lectura/escritura), seleccione el tipo de permisos que estarán disponibles con estas credenciales. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Conozca los permisos, también conocidos como modos operativos"^] .
+. Para aquellas funcionalidades de carga de trabajo que ofrecen una selección de políticas de permisos, seleccione el tipo de permisos que estarán disponibles con estas credenciales. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Obtén más información sobre los permisos."^].
 . Opcional: seleccione *Habilitar verificación automática de permisos* para verificar si tiene los permisos de cuenta de AWS necesarios para completar las operaciones de carga de trabajo.  Al habilitar la verificación se agrega el `iam:SimulatePrincipalPolicy permission` a sus políticas de permisos.  El propósito de este permiso es únicamente confirmar permisos.  Puede eliminar el permiso después de agregar credenciales, pero le recomendamos conservarlo para evitar la creación de recursos para operaciones parcialmente exitosas y para evitar tener que realizar una limpieza manual de recursos.
 . En la ventana Codebox, copie los permisos para la primera política de IAM.
-+
-Los permisos de almacenamiento también se pueden copiar desde las siguientes pestañas.
-
-+
-[role="tabbed-block"]
-====
-.Permisos de solo lectura
---
-[source, json]
-----
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "fsx:Describe*",
-        "fsx:ListTagsForResource",
-        "ec2:Describe*",
-        "kms:Describe*",
-        "elasticfilesystem:Describe*",
-        "kms:List*",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-----
---
-.Permisos de lectura y escritura
---
-[source, json]
-----
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "fsx:*",
-        "ec2:Describe*",
-        "ec2:CreateTags",
-        "ec2:CreateSecurityGroup",
-        "iam:CreateServiceLinkedRole",
-        "kms:Describe*",
-        "elasticfilesystem:Describe*",
-        "kms:List*",
-        "kms:CreateGrant",
-        "cloudwatch:PutMetricData",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ec2:AuthorizeSecurityGroupEgress",
-        "ec2:AuthorizeSecurityGroupIngress",
-        "ec2:RevokeSecurityGroupEgress",
-        "ec2:RevokeSecurityGroupIngress",
-        "ec2:DeleteSecurityGroup"
-      ],
-      "Resource": "*",
-      "Condition": {
-        "StringLike": {
-          "ec2:ResourceTag/AppCreator": "NetappFSxWF"
-        }
-      }
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-----
---
-====
 . Abra otra ventana del navegador e inicie sesión en su cuenta de AWS en la Consola de administración de AWS.
 . Abra el servicio IAM y luego seleccione *Políticas* > *Crear política*.
 . Seleccione JSON como tipo de archivo, pegue los permisos que copió en el paso 3 y seleccione *Siguiente*.
