@@ -28,7 +28,9 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Aprenda a administr
 
 == Administrar un sistema de archivos mediante ONTAP System Manager
 
-Puede administrar un sistema de archivos FSx para ONTAP directamente desde la consola utilizando la interfaz del Administrador del sistema ONTAP .  Se requiere un agente de consola para utilizar el Administrador del sistema.
+Puede administrar un sistema de archivos FSx para ONTAP directamente desde la consola utilizando la interfaz del Administrador del sistema ONTAP . Para utilizar System Manager se requiere un agente de consola o un enlace de AWS Lambda.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Aprende a usar los enlaces."^]
 
 
 

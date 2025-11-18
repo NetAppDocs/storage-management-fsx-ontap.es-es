@@ -488,7 +488,6 @@
   <block id="580649b6592437bd283b108bcef22b7d" category="inline-link">Aprenda a administrar un sistema de archivos mediante NetApp Workloads</block>
   <block id="14aa34371e663d81da2ce38739cae4bc" category="paragraph"><block ref="14aa34371e663d81da2ce38739cae4bc" category="inline-link-rx"></block></block>
   <block id="9a7d7fe4ea2506122f2a5355c685706e" category="section-title">Administrar un sistema de archivos mediante ONTAP System Manager</block>
-  <block id="af8bf7a0f182ae1d5b8be3687794ca0c" category="paragraph">Puede administrar un sistema de archivos FSx para ONTAP directamente desde la consola utilizando la interfaz del Administrador del sistema ONTAP .  Se requiere un agente de consola para utilizar el Administrador del sistema.</block>
   <block id="be0bf2e3af6b03378bb493466f3c335f" category="section-title">Administrar un sistema de archivos mediante Amazon CloudFormation</block>
   <block id="e211b2db96a2f5b2b2868517a76988c8" category="paragraph">Puede aprovisionar y administrar FSx para recursos del sistema de archivos ONTAP (volúmenes, recursos compartidos CIFS, políticas de exportación y más) mediante Amazon CloudFormation.</block>
   <block id="12980bf72a2406244df6aef483456919" category="inline-link-macro">Repositorio de GitHub del proveedor NetApp CloudFormation FSx para ONTAP</block>
@@ -716,4 +715,11 @@
   <block id="5f72153c430537b3e27deff7329da0d0" category="list-text">Desde la página Sistemas de la NetApp Console , arrastre el sistema de archivos FSx para ONTAP de origen o el sistema ONTAP local sobre el sistema de archivos FSx para ONTAP de destino y seleccione *Replicación*.</block>
   <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">11 de noviembre de 2025</block>
   <block id="1387404b18ce63590b24c55d54d3ff43" category="paragraph">La replicación de datos está disponible entre un sistema ONTAP local y un sistema de archivos FSx para ONTAP desde la página Sistemas de la NetApp Console .</block>
+  <block id="f3bb71c095338a2af8e23c9ae07072bf" category="doc">El administrador del sistema está disponible al usar un enlace de AWS Lambda.</block>
+  <block id="b8cda09456e64356f2c1763e3e53d0af" category="inline-link-macro">Aprenda a usar enlaces para operaciones avanzadas de ONTAP</block>
+  <block id="8a730f2606f493b8d797f6c96c460037" category="paragraph">La interfaz del administrador del sistema ONTAP se puede utilizar con un enlace AWS Lambda para realizar operaciones avanzadas de ONTAP . Esto proporciona una alternativa al uso de un agente de consola con System Manager para administrar un sistema de archivos FSx para ONTAP directamente desde la consola. <block ref="3b6bcb03237efb7ff1ce82387184b37d" category="inline-link-macro-rx"></block></block>
+  <block id="2c0d3ac197a4a5c6ec443759849c532e" category="paragraph">Puede administrar un sistema de archivos FSx para ONTAP directamente desde la consola utilizando la interfaz del Administrador del sistema ONTAP . Para utilizar System Manager se requiere un agente de consola o un enlace de AWS Lambda.</block>
+  <block id="eedc611f4a0b9ac93cb166f88e46128a" category="inline-link-macro">Aprende a usar los enlaces.</block>
+  <block id="61b7909f43b8222037001004e52dc71c" category="paragraph"><block ref="61b7909f43b8222037001004e52dc71c" category="inline-link-macro-rx"></block></block>
+  <block id="b566b4df138c2254f68b7631cba29c1d" category="section-title">17 de noviembre de 2025</block>
 </blocks>
