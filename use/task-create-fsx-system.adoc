@@ -238,6 +238,7 @@ Puede descubrir un sistema de archivos FSx para ONTAP solo una vez dentro de una
 ====
 * Si selecciona un clúster sin nombre, recibirá un mensaje para ingresar un nombre para el clúster.
 * Si selecciona un clúster que no tiene las credenciales necesarias para administrar el sistema de archivos FSx for ONTAP desde la consola, recibirá un mensaje para seleccionar las credenciales con los permisos necesarios.
+* Las siguientes regiones no son compatibles con el descubrimiento: regiones de China, regiones de GovCloud (EE. UU.), Secret Cloud y Top Secret Cloud.
 
 
 ====
