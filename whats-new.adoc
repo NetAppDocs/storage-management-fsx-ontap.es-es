@@ -18,6 +18,18 @@ Descubra las novedades de FSx para ONTAP.
 
 
 
+== 09 febrero 2026
+
+
+
+=== Soporte para la replicación de datos entre Cloud Volumes ONTAP y FSx for ONTAP
+
+Ahora la replicación de datos está disponible entre un sistema Cloud Volumes ONTAP y un sistema de archivos FSx for ONTAP desde la NetApp Console.
+
+link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-replicate-data.html["Replicar datos"]
+
+
+
 == 17 de noviembre de 2025
 
 
