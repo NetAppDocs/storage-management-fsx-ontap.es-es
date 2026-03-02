@@ -57,8 +57,6 @@ Para migrar los datos de la máquina virtual de almacenamiento y la configuraci�
 . <<Transición de replicación para casos de migración,Transición de replicación para casos de migración>> para migrar de forma permanente datos y ajustes de configuración del sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino.
 
 
-Para usar esta función, crea un
-
 
 
 == Crear una relación de replicación
@@ -82,6 +80,7 @@ Revisa estos requisitos antes de empezar.
 .. *Nombre de destino*: aplicaste el nombre de destino cuando arrastraste y soltaste el sistema de almacenamiento de origen en el sistema de destino en la página Console Systems.
 .. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación.  Dependiendo del caso de uso seleccionado, Workload Factory completa el formulario con valores recomendados de acuerdo con las mejores prácticas.  Puede aceptar los valores recomendados o realizar cambios a medida que completa el formulario.
 +
+*** Inteligencia artificial (IA) y aprendizaje automático (ML): replica tus datos ONTAP locales a FSx for ONTAP y crea puntos de acceso S3 para apoyar el entrenamiento de IA y ML en la nube
 *** Migración: transfiere sus datos al sistema de archivos FSx de destino para ONTAP
 +
 *Replicar configuración de VM de almacenamiento*: Opcionalmente, selecciona replicar los datos y los ajustes de configuración de la VM de almacenamiento para una sola VM de almacenamiento. Al migrar datos y ajustes de configuración al mismo tiempo, asegúrate de que la última replicación del volumen se haya completado en las últimas 24 horas. Todos los volúmenes en la misma VM de almacenamiento deben estar seleccionados para usar esta función. La política de niveles para todos los volúmenes se establece por defecto en la política de niveles del volumen de origen, lo cual se recomienda para casos de migración.
@@ -154,7 +153,7 @@ NOTE: Para la retención a largo plazo se requieren etiquetas de origen y destin
 *** *Usuario*: selecciona un usuario existente con acceso al volumen o crea un nuevo usuario.
 *** *Tipo de usuario*: selecciona *UNIX* o *Windows* como tipo de usuario.
 *** *Configuración de red*: selecciona *Internet* o *Virtual private cloud (VPC)*. El tipo de red que elijas determina si el punto de acceso es accesible desde internet o está restringido a una VPC específica.
-*** *Habilitar metadatos*: habilitar metadatos crea una tabla de S3 que contiene todos los objetos accesibles por el punto de acceso de S3, que puedes usar para auditoría, gobernanza, automática, análisis y optimización. Habilitar metadatos genera costes adicionales de AWS. Consulta link:https://aws.amazon.com/s3/pricing/["Documentación de precios de Amazon S3"^] para más información.
+*** *Habilitar tabla de inventario*: cuando habilitas la tabla de inventario en el volumen, el sistema genera metadatos para todos los objetos accesibles al punto de acceso S3 e incurre en costes de solicitud de AWS S3. Consulta link:https://aws.amazon.com/s3/pricing/["Documentación de precios de Amazon S3"^] para más información.
 
 
 .. *Etiquetas de punto de acceso S3*: opcionalmente, puedes añadir hasta 50 etiquetas.
