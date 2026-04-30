@@ -4,7 +4,7 @@ indexpage:
   summary: Amazon FSx for NetApp ONTAP lleva todas las capacidades de ONTAP a un servicio
     administrado nativo de AWS, brindando una experiencia de nube híbrida consistente.  Esta
     documentación describe cómo administrar FSx para ONTAP en la NetApp Console.
-  keywords: amazon, fsx, netapp, ontap, bluexp, create, manage, NetApp Console
+  keywords: amazon, fsx, netapp, ontap, create, manage, NetApp Console
   lead: Amazon FSx for NetApp ONTAP lleva todas las capacidades de ONTAP a un servicio
     administrado nativo de AWS, brindando una experiencia de nube híbrida consistente.  Esta
     documentación describe cómo administrar FSx para ONTAP en la NetApp Console.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: requirements/task-setting-up-permissions-fsx.html 
-keywords: fsx for ontap, iam, user role, permissions, credentials, bluexp 
+keywords: fsx for ontap, iam, user role, permissions, credentials 
 summary: Para crear o administrar un entorno de trabajo FSx para ONTAP , debe agregar credenciales de AWS en la NetApp Console proporcionando el ARN de una función de IAM que otorga los permisos necesarios para crear un sistema FSx para ONTAP desde la NetApp Console. 
 ---
 = Configurar permisos para FSx para ONTAP
