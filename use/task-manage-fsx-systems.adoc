@@ -18,11 +18,11 @@ Después de crear o descubrir un sistema FSx para ONTAP en la NetApp Console, pu
 
 
 
-== Administrar un sistema de archivos mediante cargas de trabajo de NetApp
+== Administra un sistema de archivos usando NetApp Workload Factory
 
-Cuando abres un sistema FSx para ONTAP desde la página de sistemas de la NetApp Console, vas a NetApp Workloads. Workloads es un servicio inteligente de optimización y automatización que utiliza las mejores prácticas del sector para planificar, aprovisionar y operar cargas de trabajo clave usando Amazon FSx for NetApp ONTAP.
+Cuando abres un sistema FSx para ONTAP desde la página de sistemas de la NetApp Console, vas a NetApp Workload Factory. NetApp Workload Factory es un servicio inteligente de optimización y automatización que utiliza las mejores prácticas del sector para planificar, aprovisionar y operar cargas de trabajo clave usando Amazon FSx for NetApp ONTAP.
 
-https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Aprenda a administrar un sistema de archivos mediante NetApp Workloads"^]
+https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Aprende a gestionar un sistema de archivos usando NetApp Workload Factory"^]
 
 
 
