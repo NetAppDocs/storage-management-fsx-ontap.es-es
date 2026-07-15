@@ -4,6 +4,7 @@
 
 
 
+[[support-for-replicating-data-between-cloud-volumes-ontap-and-fsx-for-ontap]]
 === Soporte para la replicación de datos entre Cloud Volumes ONTAP y FSx for ONTAP
 
 Ahora la replicación de datos está disponible entre un sistema Cloud Volumes ONTAP y un sistema de archivos FSx for ONTAP desde la NetApp Console.

@@ -4,6 +4,7 @@
 
 
 
+[[enhancements-to-replication-relationships-tab]]
 === Mejoras en la pestaña de relaciones de replicación
 
 Hemos agregado varias columnas nuevas a la tabla de relaciones de replicación para brindarle más información sobre sus relaciones de replicación en la pestaña *Relaciones de replicación*. La tabla ahora incluye las siguientes columnas:

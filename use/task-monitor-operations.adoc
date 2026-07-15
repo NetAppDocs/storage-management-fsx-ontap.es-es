@@ -35,6 +35,7 @@ Retención de eventos:: Los eventos se conservan en la interfaz de usuario duran
 
 
 
+[[track-and-monitor-operations]]
 == Seguimiento y monitoreo de operaciones
 
 Realice un seguimiento y monitoree las operaciones en la NetApp Console con Tracker.
@@ -47,6 +48,7 @@ Realice un seguimiento y monitoree las operaciones en la NetApp Console con Trac
 
 
 
+[[view-api-request]]
 == Ver solicitud de API
 
 Ver la solicitud de API en Codebox para una tarea en Tracker.
@@ -58,6 +60,7 @@ Ver la solicitud de API en Codebox para una tarea en Tracker.
 
 
 
+[[retry-a-failed-operation]]
 == Reintentar una operación fallida
 
 Reintentar una operación fallida en Tracker.  Al volver a intentar la operación fallida se inicia una nueva tarea que puedes supervisar en Tracker.
@@ -77,6 +80,7 @@ La operación se reinicia y aparece como una nueva tarea en Tracker.
 
 
 
+[[edit-and-retry-a-failed-operation]]
 == Editar y volver a intentar una operación fallida
 
 Edite los parámetros de la operación fallida y vuelva a intentar la operación fuera de Tracker.

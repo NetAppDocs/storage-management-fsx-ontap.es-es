@@ -17,6 +17,7 @@ Al replicar datos de almacenamiento VM y ajustes de configuración, primero debe
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 La replicación protege tus datos de desastres regionales y admite la migración de storage VM.
@@ -34,6 +35,7 @@ Puedes replicar un volumen de origen (lectura/escritura) o un volumen de protecc
 ====
 
 
+[[migration-use-cases]]
 === Casos de uso de migración
 
 Para la migración, puedes elegir replicar los datos de la VM de almacenamiento y la configuración para una sola VM de almacenamiento. Si migras los datos y la configuración juntos, asegúrate de que la última replicación del volumen haya finalizado en las últimas 24 horas. Debes seleccionar todos los volúmenes en la misma VM de almacenamiento para usar esta función. La política de organización en niveles para todos los volúmenes será, por defecto, la política de organización en niveles del volumen de origen, lo cual se recomienda para casos de uso de migración.
@@ -59,6 +61,7 @@ Para migrar los datos de la máquina virtual de almacenamiento y los ajustes de 
 
 
 
+[[step-1-create-the-replication-relationship]]
 == Paso 1: Crear la relación de replicación
 
 Replica datos entre dos sistemas de archivos FSx for ONTAP, entre un sistema ONTAP local y un sistema de archivos FSx for ONTAP, o entre Cloud Volumes ONTAP y un sistema de archivos FSx for ONTAP.
@@ -83,7 +86,13 @@ Revisa estos requisitos antes de empezar.
 *** Inteligencia artificial (IA) y aprendizaje automático (ML): replica tus datos ONTAP locales a FSx for ONTAP y crea puntos de acceso S3 para apoyar el entrenamiento de IA y ML en la nube
 *** Migración: transfiere sus datos al sistema de archivos FSx de destino para ONTAP
 +
-*Replicar configuración de VM de almacenamiento*: Opcionalmente, selecciona replicar los datos y los ajustes de configuración de la VM de almacenamiento para una sola VM de almacenamiento. Al migrar datos y ajustes de configuración al mismo tiempo, asegúrate de que la última replicación del volumen se haya completado en las últimas 24 horas. Todos los volúmenes en la misma VM de almacenamiento deben estar seleccionados para usar esta función. La política de niveles para todos los volúmenes se establece por defecto en la política de niveles del volumen de origen, lo cual se recomienda para casos de migración.
+*Replicar configuración de VM de almacenamiento*: Opcionalmente, selecciona para replicar los datos y los ajustes de configuración de una sola VM de almacenamiento. Al migrar datos y ajustes, todos los volúmenes deben finalizar la replicación en las últimas 24 horas y luego hacer la transición al mismo tiempo.
+
++
+La política de organización en niveles para todos los volúmenes será, por defecto, la política de organización en niveles del volumen de origen, lo cual se recomienda para casos de uso de migración.
+
++
+Durante la migración, los clientes acceden a los datos del sistema de ficheros ONTAP de origen. Después de la transición, los volúmenes están disponibles a través del FSx para ONTAP de destino mediante las direcciones IP del sistema de ficheros. Actualiza cualquier cliente o recurso que todavía use la dirección IP antigua.
 
 *** Recuperación ante desastres en caliente: garantiza una alta disponibilidad y una rápida recuperación ante desastres para cargas de trabajo críticas
 *** Recuperación ante desastres en frío o archivo:
@@ -107,7 +116,10 @@ Para todos los casos de uso, si habilita las instantáneas para la retención a 
 
 
 .. *Sistema de archivos FSx para ONTAP*: selecciona las credenciales, la región y el nombre del sistema de archivos FSx para ONTAP para el sistema de archivos FSx para ONTAP de destino.
-.. *Nombre de la máquina virtual de almacenamiento*: seleccione la máquina virtual de almacenamiento en el menú desplegable.  La máquina virtual de almacenamiento que seleccione es el destino de todos los volúmenes seleccionados en esta relación de replicación.
+.. *Nombre de VM de almacenamiento*: selecciona la VM de almacenamiento. La VM de almacenamiento que selecciones será el destino de todos los volúmenes seleccionados en esta relación de replicación.
++
+Cuando los nombres de las máquinas virtuales de almacenamiento de origen y destino son idénticos, creamos un alias de sistema de archivos para los nombres de las máquinas virtuales de almacenamiento de destino para evitar conflictos de peering.
+
 .. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy` .  Puede utilizar el nombre de volumen generado automáticamente o ingresar otro nombre de volumen.
 .. *Política de niveles*: seleccione la política de niveles para los datos almacenados en el volumen de destino.  La política de niveles tiene como valor predeterminado la política de niveles recomendada para el caso de uso que seleccionó.
 +
@@ -124,6 +136,10 @@ Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. 
 
 . En Configuración de replicación, proporcione lo siguiente:
 +
+.. *Inicializar relación de replicación*: Elige si quieres inicializar la relación de replicación inmediatamente después de crear la relación de replicación o más tarde. Ten en cuenta que la inicialización puede llevar mucho tiempo y podrías querer ejecutar la transferencia completa en horas de poca actividad.
++
+Para inicializar más tarde manualmente, consulta las instrucciones en <<Paso 2: inicializa la relación de replicación,Paso 2: inicializa la relación de replicación>>.
+
 .. *Intervalo de replicación*: seleccione la frecuencia con la que se transfieren las instantáneas desde el volumen de origen al volumen de destino.
 .. *Retención a largo plazo*: de manera opcional, habilite las instantáneas para la retención a largo plazo.  La retención a largo plazo permite que los servicios comerciales sigan funcionando incluso en caso de una falla total del sitio, lo que permite que las aplicaciones conmuten por error de forma transparente mediante una copia secundaria.
 +
@@ -134,10 +150,10 @@ Si habilita la retención a largo plazo, seleccione una política existente o cr
 
 +
 
-NOTE: Para la retención a largo plazo se requieren etiquetas de origen y destino que coincidan.  Si lo desea, Workload Factory puede crear las etiquetas faltantes para usted.
+NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la conservación a largo plazo. Si lo deseas, Workload Factory puede crear las etiquetas que falten por ti.
 
 +
-*** *Elija una política existente*: seleccione una política existente del menú desplegable.
+*** *Elige una política existente*: selecciona una política existente.
 *** *Crear una nueva política*: ingrese un *nombre de política*.
 
 
@@ -171,6 +187,7 @@ Si creaste una relación de replicación con fines de migración, debes realizar
 
 
 
+[[step-2-initialize-the-replication-relationship]]
 == Paso 2: inicializa la relación de replicación
 
 Inicializa una relación de replicación entre los volúmenes de origen y destino para transferir la instantánea y todos los bloques de datos en NetApp Workload Factory.
@@ -199,12 +216,14 @@ Cuando el estado de replicación muestra *Idle*, la transferencia de datos se ha
 
 
 
+[[step-3-cut-over-replication-for-migration-use-cases]]
 == Paso 3: transición de la replicación para casos de migración
 
 Después de crear la relación de replicación para un caso de uso de migración, debes realizar la transición de la replicación para completar la migración de los datos y los ajustes de configuración de la máquina virtual de almacenamiento al sistema de archivos FSx for ONTAP de destino. La replicación de transición migra permanentemente los datos y los ajustes de configuración de la máquina virtual de almacenamiento desde el sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino. Durante la transición, los datos se replican por última vez. La máquina virtual de almacenamiento de origen se desconecta cuando comienza la transición.
 
 
 
+[[plan-for-the-cutover-operation]]
 === Plan para la operación de transición
 
 Ten en cuenta lo siguiente al planificar la operación de transición para los casos de uso de migración.
@@ -247,6 +266,7 @@ Revisa estos requisitos antes de empezar.
 
 
 
+[[update-configuration-settings-after-cutover]]
 === Actualiza los parámetros de configuración después de la transición
 
 Después de realizar la transición de la replicación para casos de uso de migración, actualiza los siguientes ajustes de configuración de la VM de almacenamiento en la VM de almacenamiento de destino.
@@ -265,6 +285,7 @@ Después de realizar la transición de la replicación para casos de uso de migr
 
 
 
+[[related-information]]
 == Información relacionada
 
 link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_wa-updates/change-tiering-policy.html["Modificar la política de niveles"] para el volumen o volúmenes de destino tras la transición.
